@@ -1,7 +1,7 @@
 // PalmerPenguinsM3.java
 // Ahijah Marseille
-// 05/29/2026
-// Extend cunctionality using if-else and switch
+// 05/30/2026
+// Extend functionality using if-else and switch
 
 public class PalmerPenguinsM3 {
 
