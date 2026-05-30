@@ -54,8 +54,7 @@ public class PalmerPenguinsM3 {
              //Introduce Branching Analysis
              //initializing maxPop to test for max
              maxPop = c;
-             
-             if (c < g) {
+             if (c <= g) {
                  maxPop = g;
                  if (maxPop <= a) {
                      maxPop = a;
