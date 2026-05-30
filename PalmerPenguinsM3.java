@@ -42,15 +42,15 @@ public class PalmerPenguinsM3 {
             System.out.printf("%s: %d (%.2f%%)\n",SP_CHINSTRAP,
                                                  NUM_CHINSTRAP,
                                                  ((double)NUM_CHINSTRAP
-                                                 /totalPenguins * 100));
+                                                 / totalPenguins * 100));
             System.out.printf("%s: %d (%.2f%%)\n",SP_GENTOO,
                                                  NUM_GENTOO,
                                                  ((double)NUM_GENTOO
-                                                 /totalPenguins * 100));
+                                                 / totalPenguins * 100));
             System.out.printf("%s: %d (%.2f%%)\n",SP_ADELIE,
                                                  NUM_ADELIE,
                                                  ((double)NUM_ADELIE
-                                                 /totalPenguins * 100));
+                                                 / totalPenguins * 100));
              //Introduce Branching Analysis
              //initializing maxPop to test for max
              maxPop = c;
@@ -72,7 +72,7 @@ public class PalmerPenguinsM3 {
                }
                
               // solving for if numbers are equal
-              if ((maxPop == a) && (maxPop == g) {
+              if ((maxPop == a) && (maxPop == g)) {
                   tie = true;
               } else if ((maxPop == c) && (maxPop == g)) {
                   tie = true;
@@ -80,21 +80,52 @@ public class PalmerPenguinsM3 {
                   tie = true;
               }
               
-              //Outputting messages
+              //Initializing messages
              if ((maxPop == c) && (!tie)) {
              highestPopMsg = "Chinstrap penguins are the most populous";
-             } else if ((maxPop == g) && (!tie) {
+             } else if ((maxPop == g) && (!tie)) {
                 highestPopMsg = "Gentoo penguins are the most populous";
-             } else if ((maxPop == a) && (!tie) {
+             } else if ((maxPop == a) && (!tie)) {
                 highestPopMsg = "Adelie penguins are the most populous";
              }
              
-             System.out.println("Branching Analysis:);
+             //Output
+             System.out.println("Branching Analysis:");
              if (tie) {
-                highestPopMsg = "There is a tie between species for the most populous"
+                highestPopMsg = "There is a tie between species for the most populous";
                 System.out.println(highestPopMsg + ".");
              } else {
              System.out.println(highestPopMsg + ".");
              }
+             
+             //Analysis switch statement
+             String chosenSpecies = SP_GENTOO; // Change this to analyze a different species
+             switch (chosenSpecies) {
+                case SP_CHINSTRAP:
+                   System.out.println("Switch Statement Analysis:");
+                   System.out.printf("%s: %d (%.2f%%)\n", SP_CHINSTRAP, 
+                NUM_CHINSTRAP,
+                                    ((double) NUM_CHINSTRAP / 
+                totalPenguins * 100));
+                      break;
+                case SP_GENTOO:
+                   System.out.println("Switch Statement Analysis:");
+                   System.out.printf("%s: %d (%.2f%%)\n", SP_GENTOO, 
+                NUM_GENTOO,
+                                    ((double) NUM_GENTOO / 
+                totalPenguins * 100));
+                      break;
+                case SP_ADELIE:
+                   System.out.println("Switch Statement Analysis:");
+                   System.out.printf("%s: %d (%.2f%%)\n", SP_ADELIE, 
+                NUM_ADELIE,
+                                    ((double) NUM_ADELIE / 
+                totalPenguins * 100));
+                      break;
+                default: 
+                   System.out.println("Switch Statement Analysis:");
+                   System.out.println("Species not recognized.");
+             }
+                
     }
 }
